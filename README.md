@@ -69,7 +69,7 @@ By default, output is sorted by `date`, starting with the oldest bookmark. To so
 
 	readinglistreader.py --sortfield title
 	
-As an alternative to outputting a table, you can save a [bookmarks file][netscape bookmarks spec]
+As an alternative to outputting a table, you can save a [bookmarks file][netscape bookmarks spec]:
 
 [netscape bookmarks spec]: http://msdn.microsoft.com/en-us/library/ie/aa753582(v=vs.85).aspx
 
