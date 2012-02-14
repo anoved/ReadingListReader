@@ -1,6 +1,13 @@
 Reading List Reader
 ===================
 
+Safari Reading List "lets you save web pages to read or browse later." This script reads your Reading List and lists the articles bookmarked therein. It is offered as a proof of concept rather than a finished tool.  Safari's bookmarks file format is undocumented so reading it directly is totally unsupported and quite likely to fail in a variety of cases. That said, this script **does not** edit or modify your Safari bookmarks file in any way. No changes are made to the status of your Reading List.
+
+This script is derived from [Safari-Reading-List-Recipe](https://github.com/anoved/Safari-Reading-List-Recipe). It's intended to facilitate experimental integration of Reading List with services like Instapaper or Pinboard. For example, you can [import](https://pinboard.in/settings/import/) the output of `readinglistreader.py --netscape` to add your unread articles to Pinboard.
+
+Usage
+-----
+
 	usage: readinglistreader.py [-h] [--separator SEP] [--quote QUOTE]
 								[--forcequotes] [--fields FIELD [FIELD ...]]
 								[--header] [--timestamp FORMAT] [--netscape]
