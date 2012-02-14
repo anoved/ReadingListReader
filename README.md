@@ -52,7 +52,7 @@ Usage
 Installation
 ------------
 
-Make it executable with `chown +x readlinglistreader.py` and put in your `/usr/local/bin` if you want.
+Make it executable with `chown +x readinglistreader.py` and put in your `/usr/local/bin` if you want.
 
 Examples
 --------
