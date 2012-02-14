@@ -3,14 +3,14 @@ Reading List Reader
 
 Safari Reading List "lets you save web pages to read or browse later." This script reads your Reading List and lists the articles bookmarked therein. It is offered as a proof of concept rather than a finished tool.  Safari's bookmarks file format is undocumented so reading it directly is totally unsupported and quite likely to fail in a variety of cases. That said, this script **does not** edit or modify your Safari bookmarks file in any way. No changes are made to the status of your Reading List.
 
-This script is derived from [Safari-Reading-List-Recipe](https://github.com/anoved/Safari-Reading-List-Recipe). It's intended to facilitate experimental integration of Reading List with services like Instapaper or Pinboard. For example, you can [import](https://pinboard.in/settings/import/) the output of `readinglistreader.py --netscape` to add your unread articles to Pinboard.
+This script is derived from [Safari-Reading-List-Recipe](https://github.com/anoved/Safari-Reading-List-Recipe). It's intended to facilitate experimental integration of Reading List with services like Instapaper or Pinboard. For example, you can [import](https://pinboard.in/settings/import/) the output of `readinglistreader.py --bookmarks` to add your unread articles to Pinboard.
 
 Usage
 -----
 
 	usage: readinglistreader.py [-h] [--separator SEP] [--quote QUOTE]
 								[--forcequotes] [--fields FIELD [FIELD ...]]
-								[--header] [--timestamp FORMAT] [--netscape]
+								[--header] [--timestamp FORMAT] [--bookmarks]
 								[--show FILTER] [--sortfield FIELD]
 								[--sortorder ORDER] [--output OUTPUT]
 								[--input INPUT]
@@ -38,7 +38,7 @@ Usage
 	  --timestamp FORMAT    Controls format of date, added, and viewed fields.
 							Understands strftime directives. Defaults to '%a %b %d
 							%H:%M:%S %Y' (eg, 'Mon Feb 13 22:50:40 2012').
-	  --netscape            Output items in Netscape bookmarks file format.
+	  --bookmarks           Output items in Netscape bookmarks file format.
 							Overrides preceding tabular output options.
 	  --show FILTER         Control which items to output. Acceptable FILTER
 							values are unread, read, or all. Defaults to unread.
@@ -48,3 +48,31 @@ Usage
 	  --input INPUT         Input file path. Assumed to be a Safari bookmarks file
 							formatted as a binary property list. Defaults to
 							~/Library/Safari/Bookmarks.plist
+
+Installation
+------------
+
+Make it executable with `chown +x readlinglistreader.py` and put in your `/usr/local/bin` if you want.
+
+Examples
+--------
+
+With no options, a list of your unread bookmarks is displayed in `title,url` format:
+
+	readinglistreader.py
+
+Use the `--fields` option to specify the "schema" of your output table:
+
+	readinglistreader.py --fields title preview date url
+
+By default, output is sorted by `date`, starting with the oldest bookmark. To sort alphabetically by article `title`:
+
+	readinglistreader.py --sortfield title
+	
+As an alternative to outputting a table, you can save a [bookmarks file][netscape bookmarks spec]
+
+[netscape bookmarks spec]: http://msdn.microsoft.com/en-us/library/ie/aa753582(v=vs.85).aspx
+
+	readinglistreader.py --bookmarks --output bookmarks.html
+
+Note that `--bookmarks` mode ignores tabular output options such as `--fields`. However, your `--show`, `--sortfield`, and `--sortorder` settings are reflected in the bookmarks output.
