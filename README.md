@@ -5,6 +5,11 @@ Safari Reading List "lets you save web pages to read or browse later." This scri
 
 This script is derived from [Safari-Reading-List-Recipe](https://github.com/anoved/Safari-Reading-List-Recipe). It's intended to facilitate experimental integration of Reading List with services like Instapaper or Pinboard. For example, you can [import](https://pinboard.in/settings/import/) the output of `readinglistreader.py --bookmarks` to add your unread articles to Pinboard.
 
+Requirements
+------------
+
+This script is for Mac OS X 10.7 ("Lion"). It relies on libraries introduced with Python 2.7, which is not included with "Snow Leopard" or earlier versions of Mac OS X.
+
 Usage
 -----
 
