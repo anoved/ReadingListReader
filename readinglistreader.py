@@ -44,7 +44,7 @@ input_pipe.close()
 rl_section = filter(lambda record: 'com.apple.ReadingList' == record.get('Title'), xml_plist['Children'])
 reading_list = rl_section[0].get('Children')
 if reading_list == None:
-	reading_list = [];
+	reading_list = []
 
 # assemble our own list of reading list items
 bookmarks = []
