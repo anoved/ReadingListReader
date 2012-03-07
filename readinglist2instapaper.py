@@ -48,10 +48,10 @@ if 200 != auth_status:
 	ap.exit(-1)
 
 # Get the Reading List article URLs.
-# Assumes readinglistreader.py is in the current directory; if not,
-# modify Popen args to specify the correct path.
+# Assumes readinglistreader.py is executable and installed somewhere in your path.
+# Modify Popen args to suit.
 try:
-	reading_list_pipe = subprocess.Popen(('/usr/bin/env', 'python', 'readinglistreader.py', '--fields', 'url', '--forcequotes'), shell=False, stdout=subprocess.PIPE).stdout
+	reading_list_pipe = subprocess.Popen(('/usr/bin/env', 'readinglistreader.py', '--fields', 'url', '--forcequotes'), shell=False, stdout=subprocess.PIPE).stdout
 except OSError:
 	print >> sys.stderr, 'Could not read Reading List. (%s)' % sys.exc_info()[1]
 	ap.exit(-1)
