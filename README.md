@@ -87,7 +87,7 @@ Wishlist
 
 - Repackage as a Python package so other Python scripts can access ReadingListReader's functionality directly.
 - Allow deletion and/or mark-as-read of Reading List items. Naïvely overwriting `~/Library/Safari/Bookmarks.plist` with a modified plist accomplishes this, albeit without propagating changes to synced browsers/devices.
-- Provide ReadingList2Instapaper functionality as a Safari Extension for greater ease of use.
+- Provide ReadingList2Instapaper functionality in an AppleScript bundle for greater ease of use.
 
 ReadingList2Instapaper
 ----------------------
