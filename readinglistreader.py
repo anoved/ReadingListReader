@@ -31,7 +31,7 @@ if 'tab' == args.separator:
 
 # Input
 if not os.path.exists(args.input):
-	raise SystemExit, "The input file does not exist: %s" % args['input']
+	raise SystemExit, "The input file does not exist: %s" % args.input
 cmd = shlex.split('/usr/bin/plutil -convert xml1 -o - %s' % args.input)
 input_pipe = subprocess.Popen(cmd, shell=False, stdout=subprocess.PIPE).stdout
 try:
