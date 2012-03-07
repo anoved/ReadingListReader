@@ -81,3 +81,15 @@ As an alternative to outputting a table, you can save a [bookmarks file][netscap
 	readinglistreader.py --bookmarks --output bookmarks.html
 
 Note that `--bookmarks` mode ignores tabular output options such as `--fields`. However, your `--show`, `--sortfield`, and `--sortorder` settings are reflected in the bookmarks output.
+
+Wishlist
+--------
+
+- Repackage as a Python package so other Python scripts can access ReadingListReader's functionality directly.
+
+ReadingList2Instapaper
+----------------------
+
+This script uses `readinglistreader.py` and Daniel Schauenberg's [InstapaperLibrary](https://github.com/mrtazz/InstapaperLibrary) to add your unread Reading List articles to your [Instapaper](http://www.instapaper.com/) account. Specify your Instapaper account with the `--username` and `--password` arguments, or create a file named `~/.instapaperrc` containing a line with your credentials formatted as `username:password`. Articles are not removed from your Reading List as they are added to Instapaper. This script is provided as example.
+
+(InstapaperLibrary is not included with this script; install it via any of the methods advised at its GitHub page, or simply put the `instapaperlib` package folder in the same folder as `readinglist2instapaper.py`.)
