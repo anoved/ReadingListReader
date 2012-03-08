@@ -21,7 +21,29 @@ Your Reading List is read once by the `ReadingListReader` constructor. Subsequen
 
 ---
 
-# Example Scripts
+# Send Reading List to Instapaper
+
+This is a script that you can use to send your unread Reading List articles to [Instapaper](http://instapaper.com/). [Download the script](https://github.com/anoved/ReadingListReader/raw/master/Send%20Reading%20List%20to%20Instapaper/Send%20Reading%20List%20to%20Instapaper.scptd.zip), unzip it, and put it in your `~/Library/Scripts` folder so you can [run it](http://anoved.net/2007/09/script-runners/).
+
+When you first run it, you'll be prompted to enter your Instapaper email address or username:
+
+![Setup username](https://github.com/anoved/ReadingListReader/raw/master/Send%20Reading%20List%20to%20Instapaper/Screenshots/setup_username.png)
+
+Then you'll be prompted to enter your Instapaper password, if you have one; if not, leave it blank:
+
+![Setup password](https://github.com/anoved/ReadingListReader/raw/master/Send%20Reading%20List%20to%20Instapaper/Screenshots/setup_password.png)
+
+Your unread Reading List articles will be sent to Instapaper. They will not be marked as read or removed from your Reading List.
+
+Next time you run the script, it will remember your Instapaper account and simply check whether you want to proceed.
+
+![Send to Instapaper confirmation dialog](https://github.com/anoved/ReadingListReader/raw/master/Send%20Reading%20List%20to%20Instapaper/Screenshots/setup_confirm.png)
+
+Click *Change Account* to enter a new or updated username and password.
+
+---
+
+# Python Scripts
 
 Two scripts based on `readinglistlib` are provided as examples. `readinglistreader.py` dumps your Reading List in tabular or "bookmarks" format. `readinglist2instapaper.py` adds your unread Reading List items to your Instapaper queue. Details below.
 
@@ -115,4 +137,3 @@ This script uses `readinglistreader.py` and Daniel Schauenberg's [InstapaperLibr
 # Wishlist
 
 - Allow deletion and/or mark-as-read of Reading List items. Naïvely overwriting `~/Library/Safari/Bookmarks.plist` with a modified plist accomplishes this, albeit without propagating changes to synced browsers/devices. Alternatively, use GUI scripting to remove items auto-manually (more compatible, but likely more visually distracting).
-- Provide ReadingList2Instapaper functionality in a Safari Extension or AppleScript bundle for greater ease of use.
