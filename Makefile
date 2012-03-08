@@ -1,7 +1,7 @@
 CP  = /bin/cp
 ZIP = /usr/bin/zip
 
-SCRIPT             = Upload\ Reading\ List\ to\ Instapaper.scptd
+SCRIPT             = Send\ Reading\ List\ to\ Instapaper/Send\ Reading\ List\ to\ Instapaper.scptd
 SCRIPT_DIR         = $(SCRIPT)/Contents/Resources/Python
 SCRIPT_ZIP         = $(SCRIPT).zip
 
