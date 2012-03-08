@@ -1,6 +1,6 @@
 # Send Reading List to Instapaper
 
-This is a tool you can use to send your unread Reading List articles to [Instapaper](http://instapaper.com/). [Download the applet here.](https://github.com/anoved/ReadingListReader/raw/master/Send%20Reading%20List%20to%20Instapaper/Send%20Reading%20List%20to%20Instapaper.app.zip) (Alternatively, [download the script ](https://github.com/anoved/ReadingListReader/raw/master/Send%20Reading%20List%20to%20Instapaper/Send%20Reading%20List%20to%20Instapaper.scptd.zip), put it in `~/Library/Scripts`, and [run it](http://anoved.net/2007/09/script-runners/) however you prefer to run AppleScripts.)
+This is a tool for Mac OS X 10.7 Lion to send your unread Reading List articles to [Instapaper](http://instapaper.com/). [Download the applet here.](https://github.com/anoved/ReadingListReader/raw/master/Send%20Reading%20List%20to%20Instapaper/Send%20Reading%20List%20to%20Instapaper.app.zip) (Alternatively, [download the script ](https://github.com/anoved/ReadingListReader/raw/master/Send%20Reading%20List%20to%20Instapaper/Send%20Reading%20List%20to%20Instapaper.scptd.zip), put it in `~/Library/Scripts`, and [run it](http://anoved.net/2007/09/script-runners/) however you prefer to run AppleScripts.)
 
 When you first run it, you'll be prompted to enter your Instapaper email address or username:
 
