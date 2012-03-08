@@ -3,9 +3,10 @@
 # Requires https://github.com/mrtazz/InstapaperLibrary
 from instapaperlib import Instapaper
 
+from readinglistlib import ReadingListReader
+
 # Standard library modules
 import argparse
-import subprocess
 import sys
 import os
 import re
@@ -47,19 +48,13 @@ if 200 != auth_status:
 	print >> sys.stderr, auth_message
 	ap.exit(-1)
 
-# Get the Reading List article URLs.
-# Assumes readinglistreader.py is executable and installed somewhere in your path.
-# Modify Popen args to suit.
-try:
-	reading_list_pipe = subprocess.Popen(('/usr/bin/env', 'readinglistreader.py', '--fields', 'url', '--forcequotes'), shell=False, stdout=subprocess.PIPE).stdout
-except OSError:
-	print >> sys.stderr, 'Could not read Reading List. (%s)' % sys.exc_info()[1]
-	ap.exit(-1)
+# Get the Reading List items
+rlr = ReadingListReader()
+articles = rlr.read(show='unread')
 
-# Add each Reading List article URL to Instapaper.
-for article_url in reading_list_pipe:
-	article_url = article_url.rstrip('\n').strip('"')
-	(add_status, add_message) = instapaper.add_item(article_url)
+for article in articles:
+
+	(add_status, add_message) = instapaper.add_item(article['url'].encode('utf-8'), title=article['title'].encode('utf-8'))
 	
 	# 201: Added
 	# 400: Rejected (malformed request or exceeded rate limit; probably missing a parameter)
@@ -67,10 +62,7 @@ for article_url in reading_list_pipe:
 	# 500: The service encountered an error.
 	if 201 == add_status:
 		if args.verbose:
-			print article_url
+			print article['url'].encode('utf-8')
 	else:
 		print >> sys.stderr, add_message
-		reading_list_pipe.close()
 		ap.exit(-1)
-
-reading_list_pipe.close()
