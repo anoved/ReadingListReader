@@ -1,7 +1,9 @@
-CP = /bin/cp
+CP  = /bin/cp
+ZIP = /usr/bin/zip
 
 SCRIPT             = Upload\ Reading\ List\ to\ Instapaper.scptd
 SCRIPT_DIR         = $(SCRIPT)/Contents/Resources/Python
+SCRIPT_ZIP         = $(SCRIPT).zip
 
 READINGLISTLIB_DIR = readinglistlib
 
@@ -10,8 +12,12 @@ READINGLISTLIB_DIR = readinglistlib
 INSTAPAPERLIB      = InstapaperLibrary
 INSTAPAPERLIB_DIR  = $(INSTAPAPERLIB)/instapaperlib
 
-.PHONY: script setup
+.PHONY: script script setup
 	
+# Make a distributable zip file of the AppleScript
+dist: script
+	$(ZIP) -r $(SCRIPT_ZIP) $(SCRIPT)
+
 # Copies current Python scripts and libraries into AppleScript bundle
 script:
 	$(CP) readinglist2instapaper.py $(SCRIPT_DIR)
