@@ -19,6 +19,11 @@ The `read()` method has a few optional arguments that can be used to control its
 
 Your Reading List is read once by the `ReadingListReader` constructor. Subsequent calls to the `read()` method do not reload the Reading List, but can be called with different options to return different subsets of the same list.
 
+### Requirements
+
+These scripts are developed for Mac OS X 10.7 ("Lion"). It relies on libraries introduced with Python 2.7, which is not included with "Snow Leopard" or earlier versions of Mac OS X.
+
+
 ---
 
 # Send Reading List to Instapaper
@@ -52,10 +57,6 @@ Two scripts based on `readinglistlib` are provided as examples. `readinglistread
 Safari Reading List "lets you save web pages to read or browse later." This script reads your Reading List and lists the articles bookmarked therein. It is offered as a proof of concept rather than a finished tool.  Safari's bookmarks file format is undocumented so reading it directly is totally unsupported and quite likely to fail in a variety of cases. That said, this script **does not** edit or modify your Safari bookmarks file in any way. No changes are made to the status of your Reading List.
 
 This script is derived from [Safari-Reading-List-Recipe](https://github.com/anoved/Safari-Reading-List-Recipe). It's intended to facilitate experimental integration of Reading List with services like Instapaper or Pinboard. For example, you can [import](https://pinboard.in/settings/import/) the output of `readinglistreader.py --bookmarks` to add your unread articles to Pinboard.
-
-### Requirements
-
-This script is for Mac OS X 10.7 ("Lion"). It relies on libraries introduced with Python 2.7, which is not included with "Snow Leopard" or earlier versions of Mac OS X.
 
 ### Usage
 
