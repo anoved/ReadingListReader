@@ -10,7 +10,7 @@ Then you'll be prompted to enter your Instapaper password, if you have one; if n
 
 ![Setup password](https://github.com/anoved/ReadingListReader/raw/master/Send%20Reading%20List%20to%20Instapaper/Screenshots/setup_password.png)
 
-Your unread Reading List articles will be sent to Instapaper. They will not be marked as read or removed from your Reading List.
+Your unread Reading List articles will be sent to Instapaper. Articles are not automatically marked as read or removed from your Reading List. (This may limit the utility of this script as a way to "sync" Instapaper and Reading List. It is perhaps more useful as an occasional way to transfer a large number of accumulated Reading List bookmarks to Instapaper.)
 
 Next time you run the script, it will remember your Instapaper account and simply check whether you want to proceed.
 
