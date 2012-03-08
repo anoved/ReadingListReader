@@ -21,3 +21,9 @@ Click *Change Account* to enter a new or updated username and password.
 ---
 
 This tool uses [readinglistlib](https://github.com/anoved/ReadingListReader) and [instapaperlib](https://github.com/mrtazz/InstapaperLibrary).
+
+---
+
+## An Alternative
+
+So here you are, surfing GitHub and downloading scripts. You look like the roll-your-own type. Instead of sending your Reading List articles to Instapaper, why not send them straight to your Kindle (or other ereader) with [Calibre](http://www.calibre-ebook.com/) and [my ebook recipe for Reading List](https://github.com/anoved/Safari-Reading-List-Recipe)? [Here's a blog post with more details](http://anoved.net/2012/02/ebook-recipe-for-safari-reading-list/), including screenshots and a step-by-step setup guide.
