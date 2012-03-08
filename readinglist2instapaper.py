@@ -50,7 +50,7 @@ if 200 != auth_status:
 
 # Get the Reading List items
 rlr = ReadingListReader()
-articles = rlr.read(show='unread')
+articles = rlr.read()
 
 for article in articles:
 

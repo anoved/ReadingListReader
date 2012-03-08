@@ -51,7 +51,7 @@ class ReadingListReader:
 	# sortfield is one of the _articles dictionary keys
 	# ascending determines sort order; if false, sort is descending order
 	# dateformat is used to format dates; if None, datetime objects are returned
-	def read(self, show=None, sortfield='date', ascending=True, dateformat=None):
+	def read(self, show='unread', sortfield='date', ascending=True, dateformat=None):
 		
 		# Filter, sort, and return a fresh copy of the internal article list
 		articles = deepcopy(self._articles)
@@ -61,6 +61,8 @@ class ReadingListReader:
 			articles = filter(lambda record: datetime.datetime.min == record['viewed'], articles)
 		elif 'read' == show:
 			articles = filter(lambda record: datetime.datetime.min != record['viewed'], articles)
+		else:
+			pass
 		
 		# Sort articles.
 		articles = sorted(articles, key=lambda record: record[sortfield])
