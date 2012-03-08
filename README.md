@@ -23,7 +23,7 @@ Your Reading List is read once by the `ReadingListReader` constructor. Subsequen
 
 # Send Reading List to Instapaper
 
-This is a script that you can use to send your unread Reading List articles to [Instapaper](http://instapaper.com/). [Download the script](https://github.com/anoved/ReadingListReader/raw/master/Send%20Reading%20List%20to%20Instapaper/Send%20Reading%20List%20to%20Instapaper.scptd.zip), unzip it, and put it in your `~/Library/Scripts` folder so you can [run it](http://anoved.net/2007/09/script-runners/).
+This is a tool you can use to send your unread Reading List articles to [Instapaper](http://instapaper.com/). Download the [applet](https://github.com/anoved/ReadingListReader/raw/master/Send%20Reading%20List%20to%20Instapaper/Send%20Reading%20List%20to%20Instapaper.app.zip), unzip it, and run it like an app. (Alternatively, download the [script](https://github.com/anoved/ReadingListReader/raw/master/Send%20Reading%20List%20to%20Instapaper/Send%20Reading%20List%20to%20Instapaper.scptd.zip), unzip it, put it in your `~/Library/Scripts` folder, and [run it](http://anoved.net/2007/09/script-runners/) however you prefer to run AppleScripts.)
 
 When you first run it, you'll be prompted to enter your Instapaper email address or username:
 
