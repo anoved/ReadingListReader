@@ -23,34 +23,16 @@ Your Reading List is read once by the `ReadingListReader` constructor. Subsequen
 
 These scripts are developed for Mac OS X 10.7 ("Lion"). It relies on libraries introduced with Python 2.7, which is not included with "Snow Leopard" or earlier versions of Mac OS X.
 
-
 ---
 
-# Send Reading List to Instapaper
+# Example Scripts
 
-This is a tool you can use to send your unread Reading List articles to [Instapaper](http://instapaper.com/). Download the [applet](https://github.com/anoved/ReadingListReader/raw/master/Send%20Reading%20List%20to%20Instapaper/Send%20Reading%20List%20to%20Instapaper.app.zip), unzip it, and run it like an app. (Alternatively, download the [script](https://github.com/anoved/ReadingListReader/raw/master/Send%20Reading%20List%20to%20Instapaper/Send%20Reading%20List%20to%20Instapaper.scptd.zip), unzip it, put it in your `~/Library/Scripts` folder, and [run it](http://anoved.net/2007/09/script-runners/) however you prefer to run AppleScripts.)
+Two Python scripts based on `readinglistlib` are provided as examples. `readinglistreader.py` dumps your Reading List in tabular or "bookmarks" format. `readinglist2instapaper.py` adds your unread Reading List items to your Instapaper queue. Details below.
 
-When you first run it, you'll be prompted to enter your Instapaper email address or username:
-
-![Setup username](https://github.com/anoved/ReadingListReader/raw/master/Send%20Reading%20List%20to%20Instapaper/Screenshots/setup_username.png)
-
-Then you'll be prompted to enter your Instapaper password, if you have one; if not, leave it blank:
-
-![Setup password](https://github.com/anoved/ReadingListReader/raw/master/Send%20Reading%20List%20to%20Instapaper/Screenshots/setup_password.png)
-
-Your unread Reading List articles will be sent to Instapaper. They will not be marked as read or removed from your Reading List.
-
-Next time you run the script, it will remember your Instapaper account and simply check whether you want to proceed.
+An AppleScript bundle called [Send Reading List to Instapaper](https://github.com/anoved/ReadingListReader/tree/master/Send%20Reading%20List%20to%20Instapaper) is also available. It provides a somewhat more user-friendly interface to `readinglist2instapaper.py`:
 
 ![Send to Instapaper confirmation dialog](https://github.com/anoved/ReadingListReader/raw/master/Send%20Reading%20List%20to%20Instapaper/Screenshots/setup_confirm.png)
 
-Click *Change Account* to enter a new or updated username and password.
-
----
-
-# Python Scripts
-
-Two scripts based on `readinglistlib` are provided as examples. `readinglistreader.py` dumps your Reading List in tabular or "bookmarks" format. `readinglist2instapaper.py` adds your unread Reading List items to your Instapaper queue. Details below.
 
 ## readinglistreader.py
 
