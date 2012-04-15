@@ -39,7 +39,7 @@ class ReadingListReader:
 			self._articles.append({
 					'title': item['URIDictionary']['title'],
 					'url': item['URLString'],
-					'preview': item['ReadingList']['PreviewText'],
+					'preview': item['ReadingList'].get('PreviewText',''),
 					'date': item['ReadingList']['DateLastFetched'],
 					'added': added,
 					'viewed': viewed,
