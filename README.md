@@ -27,7 +27,7 @@ These scripts are developed for Mac OS X 10.7 ("Lion"). It relies on libraries i
 
 # Example Scripts
 
-Two Python scripts based on `readinglistlib` are provided as examples. `readinglistreader.py` dumps your Reading List in tabular or "bookmarks" format. `readinglist2instapaper.py` adds your unread Reading List items to your Instapaper queue. Details below.
+Two Python scripts based on `readinglistlib` are provided as examples. `readinglistreader.py` dumps your Reading List in tabular or "bookmarks" format. `readinglist2instapaper.py` adds your unread Reading List items to your Instapaper queue. `readinglist2html.py` dumps your Reading List to a simple HTML list. Details below.
 
 An AppleScript bundle called [Send Reading List to Instapaper](https://github.com/anoved/ReadingListReader/tree/master/Send%20Reading%20List%20to%20Instapaper) is also available. It provides a somewhat more user-friendly interface to `readinglist2instapaper.py`:
 
@@ -114,6 +114,12 @@ Note that `--bookmarks` mode ignores tabular output options such as `--fields`. 
 This script uses `readinglistreader.py` and Daniel Schauenberg's [InstapaperLibrary](https://github.com/mrtazz/InstapaperLibrary) to add your unread Reading List articles to your [Instapaper](http://www.instapaper.com/) account. Specify your Instapaper account with the `--username` and `--password` arguments, or create a file named `~/.instapaperrc` containing a line with your credentials formatted as `username:password`. Articles are not removed from your Reading List as they are added to Instapaper. This script is provided as example.
 
 (InstapaperLibrary is not included with this script; install it via any of the methods advised at its GitHub page, or simply put the `instapaperlib` package folder in the same folder as `readinglist2instapaper.py`.)
+
+## readinglist2html.py
+
+![readinglist2html output next to actual Reading List](https://github.com/anoved/ReadingListReader/raw/master/readinglist2html.png?raw=true)
+
+This script outputs HTML for a very plain web page which displays your Reading List. Add some styles and some HTTP headers and maybe you could run it on your Mac's web server.
 
 ---
 
