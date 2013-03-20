@@ -35,12 +35,17 @@ class ReadingListReader:
 			viewed = item['ReadingList'].get('DateLastViewed')
 			if None == viewed:
 				viewed = datetime.datetime.min
+			fetched = item['ReadingList'].get('DateLastFetched')
+			if None == fetched:
+				fetched = item['ReadingListNonSync'].get('DateLastFetched')
+				if None == fetched:
+					fetched = datetime.datetime.min
 			
 			self._articles.append({
 					'title': item['URIDictionary']['title'],
 					'url': item['URLString'],
 					'preview': item['ReadingList'].get('PreviewText',''),
-					'date': item['ReadingList']['DateLastFetched'],
+					'date': fetched,
 					'added': added,
 					'viewed': viewed,
 					'uuid': item['WebBookmarkUUID'],

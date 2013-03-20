@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.ScriptEditor.id.D8E94C8F-226B-4970-A9F9-F8373DE1F2E6</string>
 	<key>WindowState</key>
 	<dict>
 		<key>dividerCollapsed</key>
@@ -15,7 +17,7 @@
 		<key>savedFrame</key>
 		<string>17 56 932 1002 0 0 1920 1058 </string>
 		<key>selectedTabView</key>
-		<string>result</string>
+		<string>event log</string>
 	</dict>
 </dict>
 </plist>
