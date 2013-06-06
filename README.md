@@ -115,6 +115,10 @@ This script uses `readinglistreader.py` and Daniel Schauenberg's [InstapaperLibr
 
 (InstapaperLibrary is not included with this script; install it via any of the methods advised at its GitHub page, or simply put the `instapaperlib` package folder in the same folder as `readinglist2instapaper.py`.)
 
+## readinglist2pinboard.py
+
+This is a very simply script that posts your Reading List items to your [Pinboard](https://pinboard.in/tour/) account as bookmarks marked 'to read'. Insert your Pinboard API token in the script before running.
+
 ## readinglist2html.py
 
 ![readinglist2html output next to actual Reading List](https://github.com/anoved/ReadingListReader/raw/master/readinglist2html.png?raw=true)
