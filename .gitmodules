@@ -1,0 +1,3 @@
+[submodule "pocketlib"]
+	path = pocketlib
+	url = git@github.com:samuelkordik/pocketlib.git
