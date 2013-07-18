@@ -1,6 +1,0 @@
-[submodule "pocket-oauth-php"]
-	path = pocket-oauth-php
-	url = https://github.com/jshawl/pocket-oauth-php.git
-[submodule "oauth2"]
-	path = oauth2
-	url = https://github.com/simplegeo/python-oauth2.git
