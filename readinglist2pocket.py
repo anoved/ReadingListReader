@@ -24,11 +24,10 @@ if pocket.is_authed() is False:
 
 # Get the Reading List items
 rlr = ReadingListReader()
-articles = rlr.read()
+articles = rlr.read(show="unread")
 
 for article in articles:
-
-    (add_status, add_message) = pocket.add_item(article['url'].encode('utf-8'), title=article['title'].encode('utf-8'))
+    (add_status, add_message) = pocket.add_item(article['url'].encode('utf-8'), title=article['title'].encode('utf-8'), tags='reading_list')
     if 200 == add_status:
         if args.verbose:
             print article['url'].encode('utf-8')
