@@ -1,6 +1,3 @@
-[submodule "pocketlib"]
-	path = pocketlib
-	url = git@github.com:samuelkordik/pocketlib.git
 [submodule "pocket"]
 	path = pocket
 	url = https://github.com/tapanpandita/pocket.git
