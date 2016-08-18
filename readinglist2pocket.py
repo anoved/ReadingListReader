@@ -14,24 +14,20 @@ ap = argparse.ArgumentParser(description='This script adds your Safari Reading L
 ap.add_argument('-v', '--verbose', action='store_true', help='Print article URLs as they are added.')
 args = ap.parse_args()
 
-consumer_key = ""
-redirect_uri = ""
+consumer_key = "" # Insert your consumer key here (https://getpocket.com/developer/apps/)
+redirect_uri = "" # TODO: Currently obselete/phishing threat in this version 
 
-# Initialize Pocket API
-request_token = Pocket.get_request_token(consumer_key=consumer_key, redirect_uri=redirect_uri)
-auth_url = Pocket.get_auth_url(code=request_token, redirect_uri=redirect_uri)
-user_credentials = Pocket.get_credentials(consumer_key=consumer_key, code=request_token)
-access_token = user_credentials['access_token']
+# Manually trigger pocket authentication
+access_token = Pocket.auth(consumer_key=consumer_key, redirect_uri=redirect_uri)
+pocket_instance = Pocket(consumer_key, access_token)
 
 # Get the Reading List items
 rlr = ReadingListReader()
 articles = rlr.read(show="unread")
 
 for article in articles:
-    (add_status, add_message) = Pocket.add(article['url'].encode('utf-8'), title=article['title'].encode('utf-8'), tags='reading_list')
-    if 200 == add_status:
-        if args.verbose:
-            print article['url'].encode('utf-8')
-    else:
-        print >> sys.stderr, add_message
-        ap.exit(-1)
+    print pocket_instance.bulk_add(url=article['url'].encode('utf-8'), tags='reading_list')
+    print "Added:", article['url']
+
+# commit bulk_add changes
+pocket_instance.commit()
