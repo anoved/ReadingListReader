@@ -125,11 +125,21 @@ This is a very simply script that posts your Reading List items to your [Pinboar
 
 This script outputs HTML for a very plain web page which displays your Reading List. Add some styles and some HTTP headers and maybe you could run it on your Mac's web server.
 
+## readinglist2pocket.py
+
+Uses Pocket Oauth2 library to gain access token to [Pocket](https://getpocket.com/). Afterwards, loops through unread reading list entries and bulk adds them to Pocket library. 
+
+To begin, please find copy the `consumer_key` in the Pocket developer portal: https://getpocket.com/developer/apps. 
+
+
+*Open Issues*: `redirect_uri` usage. See **Wishlist**. 
+
 ---
 
 # Wishlist
 
 - Allow deletion and/or mark-as-read of Reading List items. Naïvely overwriting `~/Library/Safari/Bookmarks.plist` with a modified plist accomplishes this, albeit without propagating changes to synced browsers/devices. Alternatively, use GUI scripting to remove items auto-manually (more compatible, but likely more visually distracting).
+- Currently the solution implemented for **readinglist2pocket.py** is hacky. The `redirect_uri` field is not used, because there is no URI to return to. This could lead to potential phishing vulnerabilities. In an ideal solution, we would have a separate server/socket set up to serve as the `redirect_uri` and validate the OAuth request.
 
 ---
 

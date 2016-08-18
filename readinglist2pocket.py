@@ -5,7 +5,6 @@
 from readinglistlib import ReadingListReader
 from pocket.pocket import Pocket
 
-
 import argparse
 import sys
 
