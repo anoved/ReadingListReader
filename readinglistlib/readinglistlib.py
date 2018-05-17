@@ -42,6 +42,8 @@ class ReadingListReader:
                 if None == fetched:
                     fetched = datetime.datetime.min
             archived = item['ReadingListNonSync'].get('ArchiveOnDisk') if 'ReadingListNonSync' in item else None
+            synckey = item['Sync'].get('Key') if 'Sync' in item else None
+            syncserverid = item['Sync'].get('ServerID') if 'Sync' in item else None
             self._articles.append({
                     'title': item['URIDictionary']['title'],
                     'url': item['URLString'],
@@ -51,8 +53,8 @@ class ReadingListReader:
                     'added': added,
                     'viewed': viewed,
                     'uuid': item['WebBookmarkUUID'],
-                    'synckey': item['Sync'].get('Key'),
-                    'syncserverid': item['Sync'].get('ServerID')})
+                    'synckey': synckey,
+                    'syncserverid': syncserverid})
 
     # show specifies what articles to return: 'unread' or 'read'; if None, all.
     # sortfield is one of the _articles dictionary keys
